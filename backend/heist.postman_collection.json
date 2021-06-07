@@ -1,0 +1,459 @@
+{
+	"info": {
+		"_postman_id": "0ce77e72-1b76-47d6-b359-b8768ce1942d",
+		"name": "heist",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SBSS-09: 1. Get member",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/member/2",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-09: 2. Get member skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/member/1/skills",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-09: 3. Get heist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/member/1/skills",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"1",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-09: 4. Get heist members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/heist/1/members",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						"1",
+						"members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-09: 5. Get heist skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/heist/3/skills",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						"3",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-09: 6. Get heist status",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/heist/3/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						"3",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-11: Get the outcome of a heist.",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/heist/3/status",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						"3",
+						"status"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get member heists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/member/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all members",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/member/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all skills",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/skill",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"skill"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all heists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/heist",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-01: Add potential heist member",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Helsinki\",\n    \"sex\": \"M\",\n    \"email\": \"helsinki@ag04.com\",\n    \"skills\": [\n        {\n            \"name\": \"combat\",\n            \"level\": \"**********\"\n        },\n        {\n            \"name\": \"driving\",\n            \"level\": \"****\"\n        }\n    ],\n    \"mainSkill\": \"combat\",\n    \"status\": \"AVAILABLE\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/member",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-02: Update a member's skills.",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"skills\": [\n        {\n            \"name\": \"combat\",\n            \"level\": \"***\"\n        },\n         \n        {\n            \"name\": \"money-laundering\",\n            \"level\": \"*\"\n        },\n        {\n            \"name\": \"lock-breaking\",\n            \"level\": \"*********\"\n        }\n    ],\n    \"mainSkill\": \"combat\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/member/3/skills",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"3",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-03: Remove a member's skill",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/member/2/skills/combat",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"member",
+						"2",
+						"skills",
+						"combat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-04: Add a new heist",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Fádbrica Nacional de Moneda y Timbre\",\n    \"location\": \"Spain\",\n    \"startTime\": \"2000-09-05T22:00:00.000Z\",\n    \"endTime\": \"2000-09-10T18:00:00.000Z\",\n    \"skills\": [\n        {\n            \"name\": \"combat\",\n            \"level\": \"****\",\n            \"members\": 1\n        },\n        {\n            \"name\": \"combat\",\n            \"level\": \"*\",\n            \"members\": 3\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heist",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-05: Update required skills on a heist",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"skills\": [\n        {\n            \"name\": \"driving\",\n            \"level\": \"***\",\n            \"members\": 1\n        },\n          {\n            \"name\": \"driving\",\n            \"level\": \"****\",\n            \"members\": 1\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heist/3/skills",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						"3",
+						"skills"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-06: View members eligible to participate in a heist.",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/heist/3/eligible_members",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						"3",
+						"eligible_members"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-07: Confirm members that should participate in a heist.",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Fádbrica Nacional de Moneda y Timbre\",\n    \"location\": \"Spain\",\n    \"startTime\": \"2000-09-05T22:00:00.000Z\",\n    \"endTime\": \"2000-09-10T18:00:00.000Z\",\n    \"skills\": [\n        {\n            \"name\": \"combat\",\n            \"level\": \"****\",\n            \"members\": 1\n        },\n        {\n            \"name\": \"combat\",\n            \"level\": \"*\",\n            \"members\": 3\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/heist",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SBSS-08: Start a heist manually",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/heist/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"heist",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
