@@ -44,7 +44,7 @@ public class OnNewHeistListener {
             if (foundHeist != null && foundHeist.getStatus() == HeistStatus.READY) {
                 LOG.debug("Going to start {}", foundHeist.getName());
                 heistService.start(foundHeist);
-                LOG.info("Heist {} has started!", foundHeist);
+                LOG.info("Heist {} has started!", foundHeist.getName());
             }
         }, startTime);
 
@@ -54,7 +54,7 @@ public class OnNewHeistListener {
             if (foundHeist != null && foundHeist.getStatus() == HeistStatus.IN_PROGGRESS) {
                 LOG.debug("Going to finish {}", foundHeist);
                 heistService.finish(foundHeist);
-                LOG.info("Heist {} has finished!");
+                LOG.info("Heist {} has finished!", foundHeist.getName());
             }
         }, endTime);
     }
