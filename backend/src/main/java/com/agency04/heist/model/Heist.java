@@ -29,6 +29,7 @@ public class Heist {
     @Column(unique = true)
     private String name;
 
+    @NotEmpty
     private String location;
 
     private Instant startTime;
