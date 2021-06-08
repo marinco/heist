@@ -112,7 +112,7 @@ public class HeistController {
         heist.setSkills(updateRequiredSkillsDto.getSkills());
         heistService.update(heist);
 
-        LOG.info("Heist {} added", heist);
+        LOG.info("Heist added {}", heist);
 
         return ResponseEntity.noContent().header(HttpHeaders.CONTENT_LOCATION, "/heist/" + heistId + "/skills").build();
     }

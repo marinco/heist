@@ -67,8 +67,8 @@ public class MemberController {
 
     @PostMapping
     public ResponseEntity<?> add(@RequestBody @Valid Member member) {
-        LOG.debug("mapping member is {}", member);
         memberService.add(member);
+        LOG.info("Member added {}", member);
         return ResponseEntity.created(URI.create("/member/" + member.getId())).build();
     }
 
@@ -82,10 +82,7 @@ public class MemberController {
 
         memberService.update(member);
 
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("Content-Location", "/member/" + memberId + "/skills");
-
-        return ResponseEntity.noContent().headers(headers).build();
+        return ResponseEntity.noContent().header(HttpHeaders.CONTENT_LOCATION,"/member/" + memberId + "/skills").build();
     }
 
     @DeleteMapping("/{memberId}/skills/{skillName}")
@@ -105,6 +102,7 @@ public class MemberController {
                 return ResponseEntity.noContent().build();
             }
         }
+        LOG.warn("Member {} does not have skill {}", member.getName(), skillName);
         throw new ResourceNotFoundException("Skill '" + skillName + "' does not exist");
     }
 }
