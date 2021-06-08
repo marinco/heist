@@ -6,7 +6,12 @@ Backend part for Heist organising application.
 git clone https://github.com/marinco/heist
 cd heist/backend
 mvn package
-java -jar target/heist-0.0.1-SNAPSHOT.jar 
+java -jar target/heist-1.0.0.jar 
+```
+
+or with Docker
+```
+docker-compose up
 ```
 
 ## Test
