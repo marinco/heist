@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.agency04</groupId>
 	<artifactId>heist</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>heist</name>
 	<description>Backend server for heist organization</description>
 	<properties>
